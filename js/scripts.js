@@ -1,7 +1,7 @@
 function Pizza(pizzaSize, pizzaToppings) {
 	this.pizzaSize = pizzaSize;
-	this.pizzaToppings = [];
-}
+	this.pizzaToppings = pizzaToppings;
+};
 
 Pizza.prototype.sizes = function() {
 	var sizePrice = 0;
@@ -18,23 +18,30 @@ Pizza.prototype.sizes = function() {
 };
 
 Pizza.prototype.toppings = function() {
-	var toppingPrice = 0;
-	toppingPrice = (this.pizzaToppings).length * 1;
-	return toppingPrice;
+	var pizzaArray = [];
+	pizzaArray.push(this.pizzaToppings);
+	return pizzaArray;
 };
 
 $(document).ready(function() {
-  $("form#Pizza").submit(function(event) {
-    
-    $(".result").empty();
-    var addSize = $("select#sizeChoice").val();
+	$("form#Toppings").submit(function(event) {
+
     var addTopping = $("select#toppingChoice").val();
+	var newPizza = new Pizza(addSize, addTopping);
+	var toppingsList = newPizza.toppings();
+    $(".myToppings").empty().append(toppingsList);
+    event.preventDefault();
+  });
+  $("form#Pizza").submit(function(event) {
+    // $(".result").empty();
+    var addSize = $("select#sizeChoice").val();
+    
 
-    var newPizza = new Pizza(addSize);
-    newPizza.pizzaToppings.push(addTopping);
-
-    $(".result").append(" $" + sizePrice + toppingPrice + ".00");
-    // $(".view").show();
+    var totalSize = newPizza.sizes();
+    var totalToppings = newPizza.toppings();
+    var totalPrice = totalSize + totalToppings.length;
+    $(".result").empty().append(" $" + totalPrice + ".00");
+    $(".view").show();
     event.preventDefault();
   });
 });
