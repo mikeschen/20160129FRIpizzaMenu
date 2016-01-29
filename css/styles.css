@@ -1,9 +1,38 @@
 body {
 	color: white;
-	background-color: black;
+	background: linear-gradient(to right, red , yellow);
 }
 
+.mainImage {
+	width: 75%;
+	height: auto;
+}
 
-/*.view {
-	display: none;
-}*/
+img {
+	height: auto;
+	width: 100%;
+    float: left;
+    margin: 0 0 10px 10px;
+}
+
+.dimmed {
+  position: relative;
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+	margin-top: 15px;
+}
+
+.view {
+	margin-top: 10px;
+}
