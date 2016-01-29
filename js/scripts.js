@@ -18,22 +18,22 @@ Pizza.prototype.sizes = function() {
 	return sizePrice;
 };
 
-Pizza.prototype.toppings = function() {
-		this.pizzaArray.push(this.pizzaToppings);
-		return this.pizzaArray[0];
-};
-
 $(document).ready(function() {
   $("form#Pizza").submit(function(event) {
     $(".result").empty();
-    var addSize = $("select#sizeChoice").val();
-    var addTopping = parseInt($("select#toppingChoice").val());
 
-    var newPizza = new Pizza(addSize, addTopping);
+    var addSize = $("select#sizeChoice").val();
+    var toppingArray = [];
+    $("input:checked").each(function() {
+      toppingArray.push($(this).val());
+    });
+    console.log(toppingArray);
+    var newPizza = new Pizza(addSize);
+ 
     var totalSize = newPizza.sizes();
-    var totalToppings = newPizza.toppings();
-    var totalPrice = totalSize + totalToppings;
-    $(".result").append(" $" + totalPrice + ".00");
+    var totalPrice = totalSize + (toppingArray.length);
+
+    $(".result").append("Your " + addSize + " " + toppingArray + " pizza is $" + totalPrice + ".00");
     $(".view").show();
     event.preventDefault();
   });
