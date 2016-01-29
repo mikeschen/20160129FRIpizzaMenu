@@ -20,26 +20,19 @@ Pizza.prototype.sizes = function() {
 Pizza.prototype.toppings = function() {
 	var pizzaArray = [];
 	pizzaArray.push(this.pizzaToppings);
-	return pizzaArray;
+	return pizzaArray.length;
 };
 
 $(document).ready(function() {
-	$("form#Toppings").submit(function(event) {
-
-    var addTopping = $("select#toppingChoice").val();
-	var newPizza = new Pizza(addSize, addTopping);
-	var toppingsList = newPizza.toppings();
-    $(".myToppings").empty().append(toppingsList);
-    event.preventDefault();
-  });
   $("form#Pizza").submit(function(event) {
     // $(".result").empty();
     var addSize = $("select#sizeChoice").val();
-    
+    var addTopping = $("select#toppingChoice").val();
 
+    var newPizza = new Pizza(addSize, addTopping);
     var totalSize = newPizza.sizes();
     var totalToppings = newPizza.toppings();
-    var totalPrice = totalSize + totalToppings.length;
+    var totalPrice = totalSize + totalToppings;
     $(".result").empty().append(" $" + totalPrice + ".00");
     $(".view").show();
     event.preventDefault();
