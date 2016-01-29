@@ -5,8 +5,25 @@ describe('Pizza', function() {
 		expect(testPizza.pizzaToppings).to.eql([]);
 	});
 
-	it("returns price of pizza size", function() {
+	it("returns price of pizza size small", function() {
 		var testPizza = new Pizza("small");
-		expect(testPizza.totalPrice()).to.equal(10);
+		expect(testPizza.sizes()).to.equal(10);
+	});
+
+	it("returns price of pizza size medium", function() {
+		var testPizza = new Pizza("medium");
+		expect(testPizza.sizes()).to.equal(12);
+	});
+
+	it("returns price of pizza size large", function() {
+		var testPizza = new Pizza("large");
+		expect(testPizza.sizes()).to.equal(14);
+	});
+
+	it("returns price of pizza with one toppings", function() {
+
+		var testPizza = new Pizza();
+		testPizza.pizzaToppings.push("mushrooms");
+		expect(testPizza.toppings()).to.equal(1);
 	});
 });
