@@ -17,13 +17,27 @@ Pizza.prototype.sizes = function() {
 	return sizePrice;
 };
 
-
-
 Pizza.prototype.toppings = function() {
 	var toppingPrice = 0;
 	toppingPrice = (this.pizzaToppings).length * 1;
 	return toppingPrice;
 };
+
+$(document).ready(function() {
+  $("form#Pizza").submit(function(event) {
+    
+    $(".result").empty();
+    var addSize = $("select#sizeChoice").val();
+    var addTopping = $("select#toppingChoice").val();
+
+    var newPizza = new Pizza(addSize);
+    newPizza.pizzaToppings.push(addTopping);
+
+    $(".result").append(" $" + sizePrice + toppingPrice + ".00");
+    // $(".view").show();
+    event.preventDefault();
+  });
+});
 
 
 //pepperoni, mushrooms, onions, sausage, bacon, extra cheese, olives, pineapple, spinach

@@ -21,7 +21,6 @@ describe('Pizza', function() {
 	});
 
 	it("returns price of pizza with one toppings", function() {
-
 		var testPizza = new Pizza();
 		testPizza.pizzaToppings.push("mushrooms");
 		expect(testPizza.toppings()).to.equal(1);

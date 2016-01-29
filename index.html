@@ -10,7 +10,40 @@
   <body>
     <div class="container">
       <h2>Pizza Menu</h2>
-
+        <div class="row">    
+            <form id="Pizza">
+               <div class="col-md-4">
+            <label for="sizeChoice"><h4>Select A Size: </h4></label>
+            <select id="sizeChoice">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="toppingChoice"><h4>Select Toppings: </h4></label>
+            <select id="toppingChoice">
+              <option value="pepperoni">Pepperoni</option>
+              <option value="mushrooms">Mushrooms</option>
+              <option value="onions">Onions</option>
+              <option value="sausage">Sausage</option>
+              <option value="bacon">Bacon</option>
+              <option value="extra cheese">Extra Cheese</option>
+              <option value="olives">Olives</option>
+              <option value="pineapple">Pineapple</option>
+              <option value="spinach">Spinach</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-danger">Add A Topping</button>
+          </div>
+          </form>
+          
+        <div class= "view">
+        <p>Your Total Price Is: <!-- <span class = "result"></span> -->
+        </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
