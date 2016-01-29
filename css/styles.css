@@ -11,8 +11,8 @@ body {
 img {
 	height: auto;
 	width: 100%;
-    float: left;
-    margin: 0 0 10px 10px;
+  float: left;
+  margin: 10px 10px 10px 10px;
 }
 
 .dimmed {
@@ -27,6 +27,11 @@ img {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.8);
+}
+
+ul
+{
+    list-style-type: none;
 }
 
 .btn {
