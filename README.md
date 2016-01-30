@@ -10,7 +10,7 @@ This program uses objects to take a pizza order, including size and toppings.
 
 ## Setup/Installation Requirements
 
-Load index.html into browser
+Go to http://mikeschen.github.io/20160129FRIpizzaMenu
 
 ## Known Bugs
 
