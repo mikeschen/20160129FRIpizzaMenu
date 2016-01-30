@@ -1,7 +1,5 @@
-function Pizza(pizzaSize, pizzaToppings) {
+function Pizza(pizzaSize) {
 	this.pizzaSize = pizzaSize;
-	this.pizzaToppings = pizzaToppings;
-	this.pizzaArray = [];
 };
 
 Pizza.prototype.sizes = function() {
@@ -22,22 +20,19 @@ $(document).ready(function() {
   $("form#Pizza").submit(function(event) {
     $(".result").empty();
 
-    var addSize = $("select#sizeChoice").val();
-    var toppingArray = [];
+	var addSize = $("select#sizeChoice").val();
+	var toppingArray = [];
     $("input:checked").each(function() {
       toppingArray.push($(this).val());
     });
-    console.log(toppingArray);
+
     var newPizza = new Pizza(addSize);
- 
-    var totalSize = newPizza.sizes();
+
+ 	var totalSize = newPizza.sizes();
     var totalPrice = totalSize + (toppingArray.length);
 
-    $(".result").append("Your " + addSize + " " + toppingArray + " pizza is $" + totalPrice + ".00");
+    $(".result").append("Your " + addSize + toppingArray + " pizza is $" + totalPrice + ".00");
     $(".view").show();
     event.preventDefault();
   });
 });
-
-
-//pepperoni, mushrooms, onions, sausage, bacon, extra cheese, olives, pineapple, spinach

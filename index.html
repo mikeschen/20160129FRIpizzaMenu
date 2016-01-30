@@ -5,58 +5,51 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Pizza Menu</title>
+    <title>Papa Mike's Pizza Menu</title>
   </head>
   <body>
-    
-    
-      <img src="img/pizza2.jpg" alt="pizza image">  
-  
-          <div class = "dimmed">
-            <div class="container">
-            <h2>Pizza Menu</h2>
-            <div class="row">
-              <div class="mainImage">
-                <img src="img/pizza1.jpg">
-              </div>
-              <form id="Pizza">
-              <div class="col-sm-3">
-                <label for="sizeChoice"><h4>Select A Size: </h4></label>
-                <select id="sizeChoice">
-                 <option value="small">Small - $10</option>
-                 <option value="medium">Medium - $12</option>
-                 <option value="large">Large - $14</option>
-                </select>
-              </div>
-              <div class="col-sm-4">
-                <ul>
-                  <li><input type="checkbox" value="pepperoni"/> Pepperoni - $1
-                  <li><input type="checkbox" value="mushroom"/> Mushroom -$1
-                </ul
-                <label for="toppingChoice"><h4>Choose A Topping: </h4></label>
-                <select id="toppingChoice">
-                  <option value= 1>Pepperoni + $2</option>
-                  <option value= 1>Mushrooms + $1</option>
-                  <option value= 1>Onions + $1</option>
-                  <option value= 2>Sausage + $2</option>
-                  <option value= 2>Bacon + $2</option>
-                  <option value= 1>Extra Cheese + $1</option>
-                  <option value= 1>Olives + $1</option>
-                  <option value= 1>Pineapple + $1</option>
-                  <option value= 1>Spinach + $1</option>
-                </select>
-              </div>
-                <div class="col-sm-3">
-                <button type="submit" class="btn btn-success">Price</button>
-              </div>
-              <span class="myToppings"></span>
-            
-              <p><span class = "result"></span></p>
-          
-            </div>
-          </form>
+    <img src="img/pizza2.jpg" alt="pizza image">  
+    <div class = "dimmed">
+      <div class="container">
+        <h2>Papa Mike's Pizza Menu</h2>
+        <div class="row">
+          <div class="mainImage">
+            <img src="img/pizza1.jpg">
           </div>
+          <form id="Pizza">
+          <div class="col-md-3">
+            <label for="sizeChoice"><h4>Select A Size: </h4></label>
+              <select id="sizeChoice">
+                <option value="small">Small - $10</option>
+                <option value="medium">Medium - $12</option>
+                <option value="large">Large - $14</option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <h4>Meat Toppings: </h4>
+            <ul>
+              <li><input type="checkbox" value=" pepperoni"/> Pepperoni - $1
+              <li><input type="checkbox" value=" sausage"/> Sausage - $1
+              <li><input type="checkbox" value=" bacon"/> Bacon - $1
+              <li><input type="checkbox" value=" ham"/> Ham - $1
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Veggie Toppings: </h4>
+            <ul>
+              <li><input type="checkbox" value=" mushroom"/> Mushroom - $1
+              <li><input type="checkbox" value=" onions"/> Onion - $1
+              <li><input type="checkbox" value=" olives"/> Olive - $1
+              <li><input type="checkbox" value=" spinach"/> Spinach - $1
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-danger">Price</button>
+          </div>
+          <p><span class = "result"></span></p>
+          </form>
         </div>
+      </div>
     </div>
   </body>
 </html>

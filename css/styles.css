@@ -1,5 +1,5 @@
 body {
-	color: white;
+	color: #0078ae;
 	background: linear-gradient(to right, red , yellow);
 }
 
@@ -12,7 +12,7 @@ img {
 	height: auto;
 	width: 100%;
   float: left;
-  margin: 10px 10px 10px 10px;
+  margin: 5px 5px 8px 8px;
 }
 
 .dimmed {
@@ -26,19 +26,19 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
 }
 
-ul
-{
+ul {
     list-style-type: none;
+    color: #e21737;
 }
 
 .btn {
 	margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.view {
-	display: none;
-	margin-top: 10px;
+.row {
+  margin-left: 15px;
 }
