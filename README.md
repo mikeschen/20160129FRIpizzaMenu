@@ -21,10 +21,10 @@ None known.
 Contact: mikeschenphoto@gmail.com
 
 ## Technologies Used
-HTML
-CSS
-Bootstrap
-JQuery
+HTML,
+CSS,
+Bootstrap,
+JQuery,
 Javascript
 
 ### Legal
